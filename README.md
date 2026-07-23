@@ -1,1 +1,1 @@
-a premium crypto currency web app
+a premium crypto currency web app done using react.
