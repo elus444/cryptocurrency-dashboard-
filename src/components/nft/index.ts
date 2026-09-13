@@ -1,0 +1,1 @@
+export { NFTPlaceholder } from './NFTPlaceholder';

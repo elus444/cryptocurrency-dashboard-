@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CryptoFolio — Portfolio Control Center</title>
+    <meta name="description" content="Enterprise-grade SaaS control center for portfolio analytics, revenue operations, and team management." />
+
+    <!--
+      Restricts the page to only the origins it actually talks to: Google Fonts
+      for type, CoinGecko for live market data, cryptoicons.org for coin logos.
+      No inline/remote scripts and no plugin content are allowed at all.
+    -->
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self';
+        script-src 'self';
+        style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
+        font-src 'self' https://fonts.gstatic.com;
+        img-src 'self' data: https://cryptoicons.org;
+        connect-src 'self' https://api.coingecko.com;
+        object-src 'none';
+        base-uri 'self'"
+    />
+    <!--
+      Clickjacking protection (frame-ancestors / X-Frame-Options) only works
+      as an HTTP response header, never in a <meta> tag -- browsers ignore it
+      here. Set it at the host (Vercel/Netlify/Render/nginx, etc.) serving
+      this build, e.g. "X-Frame-Options: DENY" or "Content-Security-Policy:
+      frame-ancestors 'none'" on the response.
+    -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <meta property="og:title" content="CryptoFolio — Portfolio Control Center" />
+    <meta property="og:description" content="Enterprise-grade SaaS control center for portfolio analytics, revenue operations, and team management." />
+    <meta property="og:type" content="website" />
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="CryptoFolio — Portfolio Control Center" />
+  </head>
+
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
