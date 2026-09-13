@@ -114,9 +114,11 @@ export function StatsSection() {
                   }}
                 />
 
-                {/* Floating icon */}
+                {/* Floating icon -- inset positive from the corner (not negative)
+                    so the glyph sits fully inside the card's rounded-3xl bounds
+                    instead of being clipped by its overflow-hidden. */}
                 <motion.div
-                  className="absolute -right-4 -top-4 text-6xl opacity-8 group-hover:opacity-15 transition-opacity"
+                  className="absolute right-6 top-6 text-6xl opacity-8 group-hover:opacity-15 transition-opacity"
                   animate={{
                     y: [-4, 4, -4],
                     rotate: [-3, 3, -3],
